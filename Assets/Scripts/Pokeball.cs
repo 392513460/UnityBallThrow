@@ -68,6 +68,10 @@ public class Pokeball : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Reset();
+    }
+    public void Reset()
+    {
         //Reset pokeball
         transform.position = resetPos;
         GetComponent<Rigidbody>().isKinematic = true;
